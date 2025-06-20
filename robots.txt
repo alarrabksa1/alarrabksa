@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Sitemap: https://example.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 10
+
+# Prevent duplicate content
+Disallow: /*?*
+Disallow: /*?
+
+# Additional disallow rules
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/ 

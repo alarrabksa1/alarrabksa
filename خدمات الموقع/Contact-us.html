@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا</title>
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style/common.css" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    :root {
+      --primary-color: #2a5c82;
+      --secondar-color: #f4edd3;
+      --text-dark: #333;
+      --text-light: #fff;
+      --bg-light: #f8f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Cairo", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+    }
+
+    .contact-containers {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    /* معلومات الاتصال */
+    .contact-infos {
+      background: var(--primary-color);
+      padding: 40px;
+      border-radius: 15px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-items {
+      margin: 60px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .info-items a {
+      color: var(--text-light);
+      text-decoration: none;
+      direction: ltr;
+    }
+
+    .info-items i {
+      font-size: 24px;
+      color: var(--secondar-color);
+      width: 40px;
+      text-align: center;
+    }
+
+    .social-linkss {
+      margin-top: 40px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .social-linkss a {
+      color: white;
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .social-linkss a:hover {
+      transform: translateY(-3px);
+      color: var(--secondar-color);
+    }
+
+    /* الخريطة */
+    .map-containers {
+      margin-top: 40px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-containers iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* الرسالة الناجحة */
+    .success-messages {
+      display: none;
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-align: center;
+      animation: slideIn 0.5s ease;
+    }
+
+    /* الحركات */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* التصميم المتجاوب */
+    @media (max-width: 992px) {
+      .contact-containers {
+        grid-template-columns: 1fr;
+      }
+
+      .map-containers iframe {
+        width: 100%;
+        height: 500px;
+      }
+
+      .contact-infos {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      .contact-forms,
+      .contact-infos {
+        padding: 25px;
+      }
+
+      .info-items {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-container">
+    <header class="top-header">
+      <div class="social-media">
+        <a href="https://www.facebook.com/share/1AnzrrB2ZA/" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/al-arrab-ksa-ab14a9369/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://x.com/alarrabksa0" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/al_arrab.ksa/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <div class="contact-info">
+        <div class="phone">
+          <a href="tel:+966 92 001 5723">+966 92 001 5723</a>
+          <i class="fa-solid fa-phone-flip"></i>
+        </div>
+        <div class="email">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:alarrab.ksa0@gmail.com">alarrab.ksa0@gmail.com</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- start navbar -->
+    <nav class="main-navigation">
+      <div class="nav-brand">
+        <a href="/index.html" aria-label="الصفحة الرئيسية">
+          <h1>مصنع العراب</h1>
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>القائمة الرئيسية</h2>
+          <button class="close-sidebar" aria-label="إغلاق القائمة">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a href="/index.html" class="sidebar-link">
+              <i class="fas fa-home"></i>
+              <span>الرئيسية</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-dropdown-btn" aria-expanded="false">
+              <div class="link-content">
+                <i class="fas fa-box-open"></i>
+                <span>منتجاتنا</span>
+              </div>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <ul class="sidebar-dropdown-menu" aria-label="قائمة المنتجات">
+              <li>
+                <a href="/صفحات المنتجات/ابوب شتر.html">
+                  <i class="fa-solid fa-door-open"></i>
+                  <span>ابواب شتر</span>
+                </a>
+              </li>
+              <li>
+                <a href="/صفحات المنتجات/ابواب الرول.html">
+                  <i class="fa-solid fa-dungeon"></i>
+                  <span>ابواب الرول</span>
+                </a>
+              </li>
+              <li>
+                <a href="/صفحات المنتجات/درايش شتر.html">
+                  <i class="fa-solid fa-window-maximize"></i>
+                  <span>درايش شتر</span>
+                </a>
+              </li>
+              <li>
+                <a href="/صفحات المنتجات/مظلات وسواتر.html">
+                  <i class="fa-solid fa-umbrella-beach"></i>
+                  <span>مظلات وسواتر</span>
+                </a>
+              </li>
+              <li>
+                <a href="/صفحات المنتجات/مكاين ابواب السحب.html">
+                  <i class="fa-solid fa-cog"></i>
+                  <span>مكاين ابواب السحب</span>
+                </a>
+              </li>
+              <li>
+                <a href="/صفحات المنتجات/ابواب امريكي.html">
+                  <i class="fa-solid fa-cog"></i>
+                  <span>ابواب امريكي</span>
+                </a>
+              </li>
+              <li>
+                <a href="/خدمات الموقع/prdact.html" class="view-all">
+                  <i class="fas fa-cubes"></i>
+                  <span>عرض جميع المنتجات</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="/خدمات الموقع/photo.html" class="sidebar-link">
+              <i class="fas fa-image"></i>
+              <span>معرض الصور</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="/خدمات الموقع/About us.html" class="sidebar-link">
+              <i class="fas fa-users"></i>
+              <span>من نحن</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="/خدمات الموقع/Contact-us.html" class="sidebar-link active">
+              <i class="fas fa-phone-alt"></i>
+              <span>اتصل بنا</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="/خدمات الموقع/Service.html" class="sidebar-link">
+              <i class="fas fa-headset"></i>
+              <span>خدمة العملاء</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </nav>
+  </div>
+
+  <!-- end header -->
+
+  </div>
+  <div class="contact-containers">
+    <!-- معلومات الاتصال -->
+    <div class="contact-infos">
+      <h2 style="margin-bottom: 30px">معلومات التواصل</h2>
+
+      <div class="info-items">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h4>العنوان</h4>
+          <p>الاداره العامه الرياض المدينه الصناعيه الاولي
+            الفروع
+            القصيم _ بريده -عنيزه
+            عسير _ خميس مشيط _ النماص _ جازان _ نجران
+            الشرقيه _ الدمام _ الخبر - الاحساء</p>
+        </div>
+      </div>
+
+      <!-- ارقام الهاتف -->
+      <div class="info-items">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h4>خدمه العملاء</h4>
+          <p>
+            <a href="tel:+966 92 001 5723" dir="ltr">+966 92 001 5723</a>
+          </p>
+        </div>
+      </div>
+      <div class="info-items">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h4>المبيعات </h4>
+          <p>
+            <a href="tel:+966 053 336 5851" dir="ltr">+966 053 336 5851</a>
+          </p>
+          <p>
+            <a href="tel:+966 053 336 0576" dir="ltr">+966 053 336 0476</a>
+
+          </p>
+        </div>
+      </div>
+
+
+      <div class="info-items">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>البريد الإلكتروني</h4>
+          <p>
+            <a href="mailto:alarrab.ksa0@gmail.com">alarrab.ksa0@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="social-linkss">
+        <a href="https://www.facebook.com/share/1AnzrrB2ZA/"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/alarrabksa0"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/al_arrab.ksa/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/al-arrab-ksa-ab14a9369/"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- الخريطة -->
+    <div class="map-containers">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.38269590627!2d42.731169944705194!3d18.284098919860742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fb59db507ccbcd%3A0xfdbdc579fb87ed02!2z2YXYtdmG2Lkg2KPYqNmI2KfYqCDYp9mE2LnYsdin2Kg!5e0!3m2!1sar!2seg!4v1749072284099!5m2!1sar!2seg"
+        width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!-- Start Footer -->
+  <footer class="footer" dir="rtl">
+    <div class="footer-waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="brand-info">
+          <img src="/photo/logo/logo-removebg-preview.png" alt="شعار مصنع ابواب العراب" class="footer-logo" />
+          <h2>مصنع ابواب العراب</h2>
+        </div>
+        <p class="brand-desc">
+          نقدم حلولاً متكاملة في مجال الأبواب والأنظمة الأوتوماتيكية بجودة
+          عالية وخبرة تمتد لسنوات في السوق السعودي.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-section">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="/index.html">الرئيسية</a></li>
+            <li><a href="/خدمات الموقع/About us.html">من نحن</a></li>
+            <li><a href="/خدمات الموقع/prdact.html">منتجاتنا</a></li>
+            <li><a href="/خدمات الموقع/photo.html">معرض الصور</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>منتجاتنا</h3>
+          <ul>
+            <li>
+              <a href="/صفحات المنتجات/ابوب شتر.html">ابواب شتر</a>
+            </li>
+            <li>
+              <a href="/صفحات المنتجات/ابواب الرول.html">ابواب الرول</a>
+            </li>
+            <li>
+              <a href="/صفحات المنتجات/درايش شتر.html">درايش شتر</a>
+            </li>
+            <li>
+              <a href="/صفحات المنتجات/مظلات وسواتر.html">مظلات وسواتر</a>
+            </li>
+            <li>
+              <a href="/صفحات المنتجات/ابواب امريكي.html">ابواب امريكي</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>تواصل معنا</h3>
+          <ul class="contact-inf">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>المملكة العربية السعودية</span>
+            </li>
+            <li dir="ltr" class="num">
+              <a href="tel:+966 92 001 5723">+966 92 001 5723</a>
+              <i class="fas fa-phone"></i>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:alarrab.ksa0@gmail.com">alarrab.ksa0@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>السبت - الخميس: 8:00 الي 12:00 صباحاً - 4:00 الي 9:00 مساءً</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/1AnzrrB2ZA/" class="social-link" aria-label="فيسبوك">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/alarrabksa0" class="social-link" aria-label="تويتر">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/al_arrab.ksa/" class="social-link" aria-label="انستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/al-arrab-ksa-ab14a9369/" class="social-link" aria-label="لينكد إن">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        <p>© 2024 جميع الحقوق محفوظة لمصنع ابواب العراب</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script>
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const successMessage = document.querySelector(".success-message");
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 5000);
+
+        this.reset();
+      });
+  </script>
+  <script src="/javascript/mian.js"></script>
+
+</body>
+
+</html>

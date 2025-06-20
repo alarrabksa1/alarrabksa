@@ -1,0 +1,153 @@
+  body {
+        font-family: "Cairo", sans-serif;
+        margin: 0;
+        background: #f9f9f9;
+        color: #222;
+      }
+      .navbar {
+        padding: 0 50px;
+      }
+            .navbar .container {
+        background-color: #3b6bd2;
+
+            }
+      .containe {
+        max-width: 1400px;
+        margin: auto;
+        padding: 1rem;
+      }
+      .product {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+      .product-images {
+        flex: 1 1 300px;
+        position: relative;
+      }
+      .product-images img {
+        width: 100%;
+        border-radius: 12px;
+        transition: opacity 0.3s ease;
+      }
+      .product-thumbnails {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .product-thumbnails img {
+        width: 90px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .product-thumbnails img:hover,
+      .product-thumbnails img.active {
+        border-color: #2563eb;
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        transform: scale(1.05);
+      }
+      .product-info {
+        flex: 1 1 400px;
+      }
+      .product-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .rating {
+        color: #ffc107;
+        margin-bottom: 1rem;
+      }
+      .description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .features {
+        margin-bottom: 1.5rem;
+      }
+      .features li {
+        margin-bottom: 0.5rem;
+      }
+      .contac-btn {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: 0.3s;
+      }
+      .contac-btn:hover {
+        background: #3b6bd2;
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+      }
+
+
+        /* قسم الفيديو */
+.video-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.custom-video {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+@media (min-width: 990px)  {
+  .offcanvas-body , .offcanvas , .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+    .custom-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .progress-bar {
+        order: 1;
+        width: 100%;
+    }
+}
+      @media (max-width: 768px) {
+        .product {
+          flex-direction: column;
+        }
+        .product-title {
+          text-align: center;
+        }
+        .contact-btn {
+          display: block;
+          text-align: center;
+          margin: auto;
+          width: 90%;
+        }
+      }
+
+
+
+
+
+
+      
+
+
+      
